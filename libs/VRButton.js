@@ -23,7 +23,7 @@ class VRButton{
 
 			const button = document.createElement( 'button' );
 			button.style.display = 'none';
-            button.style.height = '40px';
+            button.style.height = '60px';
             
 			navigator.xr.isSessionSupported( this.sessionMode ).then( ( supported ) => {
 
@@ -105,14 +105,14 @@ class VRButton{
 
         button.style.display = '';
         button.style.right = '50%';
-        button.style.width = '80px';
+        button.style.width = '160px';
         button.style.cursor = 'pointer';
         button.innerHTML = '<i class="fas fa-vr-cardboard"></i>';
         
 
         button.onmouseenter = function () {
             
-            button.style.fontSize = '12px'; 
+            button.style.fontSize = '20px'; 
             button.textContent = (currentSession===null) ? 'START VR' : 'QUIT VR';
             button.style.opacity = '1.0';
 
@@ -172,7 +172,7 @@ class VRButton{
         button.style.bottom = '0px';
         button.style.border = '';
         button.style.opacity = '1';
-        button.style.fontSize = '13px';
+        button.style.fontSize = '16px';
         button.textContent = 'VR NOT SUPPORTED';
         
         
@@ -183,7 +183,7 @@ class VRButton{
 
         element.style.position = 'absolute';
         element.style.bottom = '20px';
-        if (!ignorePadding) element.style.padding = '12px 6px';
+        if (!ignorePadding) element.style.padding = '20px 12px';
         element.style.border = '1px solid #fff';
         element.style.borderRadius = '4px';
         element.style.background = (active) ? 'rgba(20,150,80,1)' : 'rgba(180,20,20,1)';
