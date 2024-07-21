@@ -80,7 +80,7 @@ class VRButton{
             self.renderer.xr.setSession( session );
             self.stylizeElement( button, false, 12, true );
             
-            button.textContent = 'EXIT VR';
+            button.textContent = 'QUIT VR';
 
             currentSession = session;
             
@@ -93,7 +93,7 @@ class VRButton{
             currentSession.removeEventListener( 'end', onSessionEnded );
 
             self.stylizeElement( button, true, 12, true );
-            button.textContent = 'ENTER VR';
+            button.textContent = 'START VR';
 
             currentSession = null;
             
@@ -104,7 +104,7 @@ class VRButton{
         //
 
         button.style.display = '';
-        button.style.right = '20px';
+        button.style.right = '50%';
         button.style.width = '80px';
         button.style.cursor = 'pointer';
         button.innerHTML = '<i class="fas fa-vr-cardboard"></i>';
@@ -113,7 +113,7 @@ class VRButton{
         button.onmouseenter = function () {
             
             button.style.fontSize = '12px'; 
-            button.textContent = (currentSession===null) ? 'ENTER VR' : 'EXIT VR';
+            button.textContent = (currentSession===null) ? 'START VR' : 'QUIT VR';
             button.style.opacity = '1.0';
 
         };
