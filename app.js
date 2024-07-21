@@ -24,7 +24,7 @@ class App{
         this.dolly.position.set(0, 0, 10);
         this.dolly.add(this.camera);
 
-        this.dolly.rotation.y = THREE.MathUtils.degToRad(275);
+        this.dolly.rotation.y = THREE.MathUtils.degToRad(300);
 
         this.dummyCam = new THREE.Object3D();
         this.camera.add( this.dummyCam );
